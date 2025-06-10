@@ -1,265 +1,234 @@
-/* Reset */
-* {
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Variabel Warna */
-:root {
-  --primary: #8b4513; /* Coklat Tua */
-  --secondary: #d2691e; /* Coklat Jahe */
-  --light: #f5f5dc; /* Krem */
-  --dark: #556b2f; /* Hijau Tua */
-  --text: #333;
-}
-
-body {
-  color: var(--text);
+  background-color: #f8f8f8; /* Light background */
+  color: #333;
   line-height: 1.6;
 }
 
-/* Navbar Styling */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 5%;
-  background-color: var(--dark);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 100;
-}
-
-.logo {
-  color: var(--light);
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-}
-
-.nav-links li {
-  margin-left: 2rem;
-}
-
-.nav-links a {
-  color: var(--light);
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: var(--secondary);
-}
-
-/* Hero Section */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8rem 5% 4rem;
-  background-color: var(--light);
-}
-
-.hero-content {
-  flex: 1;
-  padding-right: 2rem;
-}
-
-.hero-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: var(--dark);
-}
-
-.hero-content p {
-  margin-bottom: 1.5rem;
-}
-
-.cta-button {
-  display: inline-block;
-  background-color: var(--secondary);
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.cta-button:hover {
-  background-color: var(--primary);
-}
-
-.hero-image {
-  flex: 1;
-  text-align: center;
-}
-
-.hero-image img {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Section Umum */
-section {
-  padding: 5rem 5%;
-}
-
-.about,
-.product,
-.order {
-  text-align: center;
-}
-
-.about h2,
-.product h2,
-.order h2 {
-  margin-bottom: 2rem;
-  color: var(--dark);
-}
-
-/* Fitur */
-.features {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.feature {
-  flex: 1;
-  max-width: 300px;
-  padding: 1.5rem;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-/* Produk */
-.product-detail {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  margin-top: 2rem;
-}
-
-.product-info {
-  text-align: left;
-}
-
-/* Form Pemesanan */
-.order form {
-  max-width: 600px;
+.section-padding {
+  padding: 60px 20px;
+  max-width: 1200px;
   margin: 0 auto;
-  text-align: left;
 }
 
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.form-group-check {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-
-.form-group-check input {
-  margin-right: 0.5rem;
-}
-
-button[type="submit"] {
-  background-color: var(--secondary);
+/* Navbar */
+nav {
+  background-color: #4caf50; /* Greenish color from poster */
   color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-button[type="submit"]:hover {
-  background-color: var(--primary);
-}
-
-#warning {
-  color: red;
-  margin-bottom: 1rem;
-}
-
-/* Link Partner */
-.partner-link {
-  text-align: center;
-  padding: 2rem 0;
-  background-color: var(--light);
-}
-
-/* Footer */
-footer {
-  background-color: var(--dark);
-  color: var(--light);
-  padding: 2rem 0;
-}
-
-.footer-content {
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0 20px;
 }
 
-.contact-info h3 {
-  margin-bottom: 0.5rem;
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.8em;
+  font-weight: bold;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    padding-top: 6rem;
-  }
-  .hero-content {
-    padding-right: 0;
-    margin-bottom: 2rem;
-  }
-  .features {
-    flex-direction: column;
-    align-items: center;
-  }
-  .product-detail {
-    flex-direction: column;
-  }
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  .contact-info {
-    margin-bottom: 1.5rem;
-  }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #e0e0e0;
+}
+
+nav ul li img {
+  height: 24px; /* Adjust as needed */
+  width: 24px;
+  margin-right: 5px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: url("https://via.placeholder.com/1500x500/A0B28C/ffffff?text=Background+Image+Alam+Kuang")
+    no-repeat center center/cover; /* Placeholder, ganti dengan gambar alam yang relevan */
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.hero-content {
+  max-width: 800px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for text */
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #ffc107; /* Amber/Yellow for CTA */
+  color: #333;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e0b000;
+}
+
+/* Description & Product Sections */
+#description-section,
+#product-section,
+#contact-form-section {
+  text-align: center;
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#description {
+  font-size: 1.1em;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #555;
+}
+
+h2 {
+  font-size: 2.2em;
+  color: #4caf50;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #eee;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.image-container {
+  margin: 30px 0;
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-align: left;
+  color: #555;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"] {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: flex-start; /* Aligns checkbox and label at start */
+  margin-bottom: 20px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 10px;
+  margin-top: 5px; /* Adjust vertical alignment if needed */
+}
+
+form button {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+.warning-message {
+  color: #d9534f; /* Red for warning */
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+.footer-content p {
+  margin: 5px 0;
+  font-size: 0.9em;
 }
