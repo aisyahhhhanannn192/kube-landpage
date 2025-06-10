@@ -1,67 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>KTH Alam Kuang - Serbuk Jahe</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="script.js" defer></script>
-</head>
-<body>
-    <!-- Nomor 1: Navbar -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page Kelompok Tani Hutan Alam Kuang</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <nav>
-        <div class="logo">KTH Alam Kuang</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">Tentang</a></li>
-            <li><a href="#product">Produk</a></li>
-            <li><a href="#order">Pesan</a></li>
+      <div class="navbar-container">
+        <a href="#" class="logo">KTH Alam Kuang</a>
+        <ul>
+          <li><a href="#description-section">Tentang</a></li>
+          <li><a href="#product-section">Produk</a></li>
+          <li><a href="#contact-form-section">Kontak</a></li>
+          <li>
+            <a href="https://skilvul.com" id="link" target="_blank">Skilvul</a>
+          </li>
+          <li>
+            <a href="#profile"
+              ><img
+                src="https://via.placeholder.com/24/cccccc/000000?text=👤"
+                alt="Profile Icon"
+                style="vertical-align: middle"
+              />
+              Profil</a
+            >
+          </li>
         </ul>
+      </div>
     </nav>
 
-    <!-- Hero / Description (No 2) -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Serbuk Jahe KTH Alam Kuang</h1>
-            <p id="description">Website ini berisi form untuk validasi tugas Skilvul.</p>
-            <a href="https://skilvul.com" id="link">Kunjungi Skilvul</a>
+    <header class="hero-section">
+      <div class="hero-content">
+        <h1>Selamat Datang di Kelompok Tani Hutan Alam Kuang</h1>
+        <p>
+          Nikmati kehangatan dan kebaikan alami dari Serbuk Jahe KTH Alam Kuang.
+        </p>
+        <a href="#contact-form-section" class="cta-button">Pesan Sekarang!</a>
+      </div>
+    </header>
+
+    <section id="description-section" class="section-padding">
+      <p id="description">
+        Website ini adalah landing page resmi dari Kelompok Tani Hutan (KTH)
+        Alam Kuang dari Desa Pengempon. Kami memproduksi serbuk jahe berkualitas
+        tinggi yang dibuat dari bahan-bahan pilihan langsung dari lahan
+        pertanian desa kami. Temukan keaslian dan khasiat di setiap cangkir!
+      </p>
+    </section>
+
+    <section id="product-section" class="section-padding">
+      <h2>Produk Unggulan Kami</h2>
+      <div class="image-container">
+        <img
+          src="POSTER SERBUK JAHE KTH - AISYAH HANAN.jpg"
+          alt="Serbuk Jahe KTH Alam Kuang"
+          class="product-image"
+        />
+      </div>
+      <p>Serbuk Jahe KTH Alam Kuang: Nikmat, Praktis, Berkhasiat.</p>
+    </section>
+
+    <section id="contact-form-section" class="section-padding">
+      <h2>Hubungi Kami</h2>
+      <form id="myForm">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="city">Kota:</label>
+        <input type="text" id="city" name="city" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="zip-code">Kode Pos:</label>
+        <input type="number" id="zip-code" name="zip-code" required />
+
+        <div class="checkbox-container">
+          <input type="checkbox" id="status" name="status" />
+          <label for="status" id="check"
+            >Dengan ini saya menyatakan data yang diisi pada form ini adalah
+            benar dan telah sesuai</label
+          >
         </div>
-        <img src="https://iili.io/FFPp5wF.md.jpg" alt="Serbuk Jahe" class="hero-image" />
+
+        <button type="submit" id="submit-form">Submit</button>
+
+        <div id="warning" class="warning-message"></div>
+      </form>
     </section>
 
-    <!-- Nomor 5: Form -->
-    <section id="order" class="order-form">
-        <h2>Form Pemesanan</h2>
-        <form id="orderForm">
-            <div class="form-group">
-                <label for="name">Nama:</label>
-                <input type="text" id="name" name="name" required />
-            </div>
-            <div class="form-group">
-                <label for="city">Kota:</label>
-                <input type="text" id="city" name="city" required />
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-                <label for="zip-code">Kode Pos:</label>
-                <input type="number" id="zip-code" name="zip-code" required />
-            </div>
-            <div class="form-group">
-                <input type="checkbox" id="status" name="status" required />
-                <label for="status">Dengan ini saya menyatakan data yang diisi pada form ini adalah benar dan telah sesuai</label>
-            </div>
-            <button type="submit" id="submit-form">Submit</button>
-            <div id="warning"></div>
-        </form>
-    </section>
-
-    <!-- Nomor 11: Footer -->
     <footer>
-        <p>&copy; 2025 KTH Alam Kuang. Hak Cipta Dilindungi.</p>
+      <div class="footer-content">
+        <p>&copy; 2025 Kelompok Tani Hutan Alam Kuang. All rights reserved.</p>
+        <p>Dibuat oleh Aisyah Hanan, Mahasiswa Data Science.</p>
+      </div>
     </footer>
-</body>
+
+    <script src="script.js"></script>
+  </body>
 </html>
