@@ -17,23 +17,18 @@ function checkboxIsChecked() {
 }
 
 function validateFormData(data) {
-  return (
-    data != null &&
-    isNumber(data.zipCode) &&
-    checkboxIsChecked()
-  );
+  return data !== null && isNumber(data.zipCode) && checkboxIsChecked();
 }
 
 function submit(event) {
   event.preventDefault();
   const data = handleGetFormData();
-  const isValid = validateFormData(data);
+  const warning = document.getElementById("warning");
 
-  const warningEl = document.getElementById("warning");
-  if (!isValid) {
-    warningEl.innerText = "Periksa form anda sekali lagi.";
+  if (!validateFormData(data)) {
+    warning.innerText = "Periksa form anda sekali lagi.";
   } else {
-    warningEl.innerText = "";
+    warning.innerText = "";
   }
 }
 
