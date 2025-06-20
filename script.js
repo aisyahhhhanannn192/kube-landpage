@@ -8,8 +8,8 @@ function handleGetFormData() {
   };
 }
 
-function isNumber(str) {
-  return !isNaN(str);
+function isNumber(string) {
+  return !isNaN(string);
 }
 
 function checkboxIsChecked() {
@@ -20,18 +20,13 @@ function validateFormData(data) {
   return data !== null && isNumber(data.zipCode) && checkboxIsChecked();
 }
 
-// INI DIA, FUNCTION PALING SENSITIF DI DUNIA
-function submit(event) {
-  event.preventDefault();
+function submit() {
   const data = handleGetFormData();
   const warning = document.getElementById("warning");
 
   if (!validateFormData(data)) {
-    warning.innerText = "Periksa form anda sekali lagi.";
+    warning.textContent = "Periksa form anda sekali lagi";
   } else {
-    warning.innerText = "";
+    warning.textContent = "";
   }
 }
-
-// THIS LINE IS CRUCIAL (harus connect)
-document.getElementById("form-order").addEventListener("submit", submit);
