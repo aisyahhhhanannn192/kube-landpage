@@ -20,6 +20,7 @@ function validateFormData(data) {
   return data !== null && isNumber(data.zipCode) && checkboxIsChecked();
 }
 
+// INI DIA, FUNCTION PALING SENSITIF DI DUNIA
 function submit(event) {
   event.preventDefault();
   const data = handleGetFormData();
@@ -32,4 +33,5 @@ function submit(event) {
   }
 }
 
+// THIS LINE IS CRUCIAL (harus connect)
 document.getElementById("form-order").addEventListener("submit", submit);
